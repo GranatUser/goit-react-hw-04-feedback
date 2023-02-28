@@ -5,26 +5,19 @@ import { Notification } from './Notification'
 import { Section } from './Section';
 
 export class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      good: 0,
-      neutral: 0,
-      bad: 0
-    }
-    this.handleAddDataStatictics = this.handleAddDataStatictics.bind(this);
-    this.countTotalFeedback = this.countTotalFeedback.bind(this);
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0
   }
-
-
-  handleAddDataStatictics(event) {
+  handleAddDataStatictics = (event) => {
     const option = event.target.textContent.toString().toLowerCase();
     this.setState((prev) => ({
       [option]: prev[option] + 1
     }))
   }
 
-  countTotalFeedback() {
+  countTotalFeedback = () => {
     return this.state.bad + this.state.good + this.state.neutral;
   }
   countPositiveFeedbackPercentage = () => {

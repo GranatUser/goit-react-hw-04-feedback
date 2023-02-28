@@ -1,16 +1,13 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 
-export class FeedbackOptions extends React.Component {
-    render() {
-        return (
-            <ul onClick={this.props.onLeaveFeedback}>
-                {this.props.options.map((option) => {
-                    return (<button type="button" key={option}>{option}</button>);
-                })}
-            </ul>
-        );
-    }
+export function FeedbackOptions(props) {
+    return (
+        <ul onClick={props.onLeaveFeedback}>
+            {props.options.map((option) => {
+                return (<button type="button" key={option}>{option}</button>);
+            })}
+        </ul>
+    );
 }
 
 FeedbackOptions.propTypes = {
