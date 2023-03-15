@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 export function Notification(props) {
 
     return (
-        <p>
-            {props.message}
-        </p>
+        <p>{props.message}</p>
     );
 }
 
