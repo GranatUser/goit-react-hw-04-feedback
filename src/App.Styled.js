@@ -15,6 +15,7 @@ export const AppStyled = styled.div`
 }
 & button:hover,& button:focus{
     background-color:#eb4034;
+    cursor: pointer;
     
 }
 & button:not(:last-child){
